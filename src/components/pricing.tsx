@@ -105,10 +105,10 @@ const tiers = [
 function Header() {
   return (
     <Container className="mt-16">
-      <Heading as="h1">Pricing that grows with your team size.</Heading>
-      <Lead className="mt-6 max-w-3xl">
-        Companies all over the world have closed millions of deals with Radiant.
-        Sign up today and start selling smarter.
+      <Heading as="h1">Trois abonnements, des possibilités infinies.</Heading>
+      <Lead className="mt-6">
+        Des automatisations puissantes, sans devis, sans attente, sans prise de tête.<br />
+        Un abonnement mensuel pour créer, améliorer ou dépanner vos workflows… dès que vous en avez besoin.
       </Lead>
     </Container>
   )

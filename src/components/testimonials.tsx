@@ -143,8 +143,8 @@ function CallToAction() {
   return (
     <div>
       <p className="max-w-3xl text-sm/6 text-gray-600">
-        Vos concurrents utilisent déjà l'IA ! <br />
-        Rejoignez des milliers d'entreprises qui ont intégré l'IA dans leur activité quotidienne.
+        Vos concurrents utilisent déjà l&apos;IA ! <br />
+        Rejoignez des milliers d&apos;entreprises qui ont intégré l&apos;IA dans leur activité quotidienne.
       </p>
       <div className="mt-2">
         <Link
@@ -181,7 +181,7 @@ export function Testimonials() {
         <div ref={setReferenceWindowRef}>
           <Subheading>Ce que disent nos clients</Subheading>
           <Heading as="h3" className="mt-2">
-            L'IA a changé leur quotidien
+            L&apos;IA a changé leur quotidien
           </Heading>
         </div>
       </Container>

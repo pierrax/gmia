@@ -19,46 +19,33 @@ import { Heading, Subheading } from './text'
 
 const testimonials = [
   {
-    img: '/testimonials/tina-yards.jpg',
-    name: 'Tina Yards',
-    title: 'VP of Sales, Protocol',
+    img: '/testimonials/francklemeur.jpg',
+    name: 'Franck Le Meur',
+    title: 'CEO TechToMed',
     quote:
-      'Thanks to Radiant, we’re finding new leads that we never would have found with legal methods.',
+      "Nous avons automatisé notre veille scientifique et la production de contenus. Nous avons clairement gagner en efficacité sur notre communication."
   },
   {
-    img: '/testimonials/conor-neville.jpg',
-    name: 'Conor Neville',
-    title: 'Head of Customer Success, TaxPal',
+    img: '/testimonials/jossroulet.jpeg',
+    name: 'Joss Roulet',
+    title: 'Media Strategy for Global Brands',
     quote:
-      'Radiant made undercutting all of our competitors an absolute breeze.',
+      "On a automatisé ensemble l'analyse des briefs clients."
   },
   {
-    img: '/testimonials/amy-chase.jpg',
-    name: 'Amy Chase',
-    title: 'Head of GTM, Pocket',
+    img: '/testimonials/gregroiredepins.jpeg',
+    name: 'Grégoire de Pins',
+    title: 'Consultant',
     quote:
-      'We closed a deal in literally a few minutes because we knew their exact budget.',
+      "J'ai gagné plusieurs heures par mois en éléminant les tâches répétitives."
   },
   {
-    img: '/testimonials/veronica-winton.jpg',
-    name: 'Veronica Winton',
-    title: 'CSO, Planeteria',
+    img: '/testimonials/cedric.jpeg',
+    name: 'Cédric Le Moign',
+    title: 'Gérant ',
     quote:
-      'We’ve managed to put two of our main competitors out of business in 6 months.',
-  },
-  {
-    img: '/testimonials/dillon-lenora.jpg',
-    name: 'Dillon Lenora',
-    title: 'VP of Sales, Detax',
-    quote: 'I was able to replace 80% of my team with RadiantAI bots.',
-  },
-  {
-    img: '/testimonials/harriet-arron.jpg',
-    name: 'Harriet Arron',
-    title: 'Account Manager, Commit',
-    quote:
-      'I’ve smashed all my targets without having to speak to a lead in months.',
-  },
+      'Le support client a été automatisé grâce à un agent IA enrichi avec nos échanges clients.',
+  }
 ]
 
 function TestimonialCard({
@@ -155,16 +142,16 @@ function TestimonialCard({
 function CallToAction() {
   return (
     <div>
-      <p className="max-w-sm text-sm/6 text-gray-600">
-        Join the best sellers in the business and start using Radiant to hit
-        your targets today.
+      <p className="max-w-3xl text-sm/6 text-gray-600">
+        Vos concurrents utilisent déjà l'IA ! <br />
+        Rejoignez des milliers d'entreprises qui ont intégré l'IA dans leur activité quotidienne.
       </p>
       <div className="mt-2">
         <Link
           href="#"
           className="inline-flex items-center gap-2 text-sm/6 font-medium text-pink-600"
         >
-          Get started
+          Commencer
           <ArrowLongRightIcon className="size-5" />
         </Link>
       </div>
@@ -192,9 +179,9 @@ export function Testimonials() {
     <div className="overflow-hidden py-32">
       <Container>
         <div ref={setReferenceWindowRef}>
-          <Subheading>What everyone is saying</Subheading>
+          <Subheading>Ce que disent nos clients</Subheading>
           <Heading as="h3" className="mt-2">
-            Trusted by professionals.
+            L'IA a changé leur quotidien
           </Heading>
         </div>
       </Container>

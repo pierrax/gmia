@@ -13,8 +13,9 @@ import { Map } from '@/components/map'
 import { Navbar } from '@/components/navbar'
 import { Screenshot } from '@/components/screenshot'
 import { Testimonials } from '@/components/testimonials'
+import { Pricing } from '@/components/pricing'
 import { Heading, Subheading } from '@/components/text'
-import { ChevronRightIcon } from '@heroicons/react/16/solid'
+import { ChevronRightIcon, ChatBubbleLeftRightIcon, BoltIcon, ArrowPathIcon } from '@heroicons/react/16/solid'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -40,21 +41,76 @@ function Hero() {
         />
         <div className="pt-16 pb-24 sm:pt-24 sm:pb-32 md:pt-32 md:pb-48">
           <h1 className="font-display text-6xl/[0.9] font-medium tracking-tight text-balance text-gray-950 sm:text-8xl/[0.8] md:text-9xl/[0.8]">
-            Vos concurrents utilisent déjà l'IA
+            Automatisation à la demande
           </h1>
-          <p className="mt-8 max-w-lg text-xl/7 font-medium text-gray-950/75 sm:text-2xl/8">
-            Radiant helps you sell more by revealing sensitive information about
-            your customers.
+          <p className="mt-8 max-w-3xl text-xl/7 font-medium text-gray-950/75 sm:text-2xl/8">
+            Le bras droit IA des indépendants & petites entreprises
+          </p>
+          <p className="mt-8 max-w-3xl text-base/7 font-medium text-gray-950/75 sm:text-lg/8">
+            Des automatisations puissantes, sans devis, sans attente, sans prise de tête.<br />
+            Un abonnement mensuel pour créer, améliorer ou dépanner vos workflows… dès que vous en avez besoin.
           </p>
           <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
-            <Button href="#">Get started</Button>
+            <Button href="#">Commencer</Button>
             <Button variant="secondary" href="/pricing">
-              See pricing
+              Voir les prix
             </Button>
           </div>
         </div>
       </Container>
     </div>
+  )
+}
+
+function BenefitSection() {
+  return (
+    <Container className="mt-10">
+      <Subheading>Comment ça marche</Subheading>
+      <Heading as="h3" className="mt-2">
+        Avec Good Morning IA, vous avez un spécialiste en automatisation à la demande.
+      </Heading>
+      <p className="mt-4 max-w-3xl text-lg/8 text-gray-600">
+        Vous envoyez vos besoins → on livre. Simple, rapide, efficace.
+      </p>
+
+      <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-3">
+        <BentoCard
+          eyebrow="Demande"
+          title="Soumettez une demande"
+          description="Envoyez vos besoins via Slack, WhatsApp ou Notion. On s&apos;en occupe sous 24–48h avec des révisions illimitées jusqu&apos;à ce que vous soyez satisfait."
+          graphic={
+            <div className="flex size-full items-center justify-center bg-gradient-to-br from-indigo-50 to-indigo-100">
+              <ChatBubbleLeftRightIcon className="size-16 text-indigo-600" />
+            </div>
+          }
+          fade={['bottom']}
+          className="lg:rounded-tl-4xl"
+        />
+        <BentoCard
+          eyebrow="Rapidité"
+          title="Livraison rapide"
+          description="Pas de devis, pas d&apos;attente, pas de prise de tête. Un abonnement mensuel pour créer, améliorer ou dépanner vos workflows dès que vous en avez besoin."
+          graphic={
+            <div className="flex size-full items-center justify-center bg-gradient-to-br from-yellow-50 to-yellow-100">
+              <BoltIcon className="size-16 text-yellow-600" />
+            </div>
+          }
+          fade={['bottom']}
+        />
+        <BentoCard
+          eyebrow="Flexibilité"
+          title="Demandes illimitées"
+          description="Tant que vous êtes abonné, vous pouvez envoyer autant de demandes que vous voulez (1 active à la fois). Vous êtes indépendant ou dirigeant de TPE ? Votre temps est trop précieux pour faire des copier-coller ou jongler entre 12 outils."
+          graphic={
+            <div className="flex size-full items-center justify-center bg-gradient-to-br from-green-50 to-green-100">
+              <ArrowPathIcon className="size-16 text-green-600" />
+            </div>
+          }
+          fade={['bottom']}
+          className="lg:rounded-tr-4xl"
+        />
+      </div>
+    </Container>
   )
 }
 
@@ -149,7 +205,7 @@ function DarkBentoSection() {
             dark
             eyebrow="Networking"
             title="Sell at the speed of light"
-            description="Our RadiantAI chat assistants analyze the sentiment of your conversations in real time, ensuring you're always one step ahead."
+            description="Our RadiantAI chat assistants analyze the sentiment of your conversations in real time, ensuring you&apos;re always one step ahead."
             graphic={
               <div className="h-80 bg-[url(/screenshots/networking.png)] bg-size-[851px_344px] bg-no-repeat" />
             }
@@ -169,7 +225,7 @@ function DarkBentoSection() {
             dark
             eyebrow="Meetings"
             title="Smart call scheduling"
-            description="Automatically insert intro calls into your leads' calendars without their consent."
+            description="Automatically insert intro calls into your leads&apos; calendars without their consent."
             graphic={<LinkedAvatars />}
             className="lg:col-span-2 lg:rounded-bl-4xl"
           />
@@ -195,6 +251,7 @@ export default function Home() {
     <div className="overflow-hidden">
       <Hero />
       <main>
+        <BenefitSection />
         <Container className="mt-10">
           <LogoCloud />
         </Container>
@@ -205,6 +262,7 @@ export default function Home() {
         <DarkBentoSection />
       </main>
       <Testimonials />
+      <Pricing />
       <Footer />
     </div>
   )

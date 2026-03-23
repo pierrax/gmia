@@ -188,7 +188,7 @@ function PricingCards() {
             <PricingCard key={tierIndex} tier={tier} />
           ))}
         </div>
-        <LogoCloud className="mt-24" />
+        {/* <LogoCloud className="mt-24" /> */}
       </Container>
     </div>
   )

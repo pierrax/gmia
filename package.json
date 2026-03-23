@@ -18,12 +18,14 @@
     "dayjs": "^1.11.13",
     "feed": "^5.1.0",
     "framer-motion": "^12.23.11",
+    "lucide-react": "^0.556.0",
     "next": "15.4.4",
     "next-sanity": "^10.0.5",
     "react": "^19",
     "react-dom": "^19",
     "react-use-measure": "^2.1.7",
-    "sanity": "^4.2.0"
+    "sanity": "^4.2.0",
+    "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

@@ -126,9 +126,9 @@ export const UseCases = () => {
 
       <div className="container mx-auto max-w-2xl lg:max-w-7xl">
         <div className=" max-w-3xl mb-16">
-          <Subheading>Cas d'usage</Subheading>
+          <Subheading>Cas d&apos;usage</Subheading>
           <Heading as="h3" className="mt-2">
-            Vos concurrents utilisent déjà l'IA !
+            Vos concurrents utilisent déjà l&apos;IA !
           </Heading>
 
           <p className="text-xl text-muted-foreground mt-4">

@@ -3,7 +3,7 @@
 import { Button } from '@/components/button'
 import { Container } from '@/components/container'
 import { Gradient } from '@/components/gradient'
-import { LogoCloud } from '@/components/logo-cloud'
+// import { LogoCloud } from '@/components/logo-cloud'
 import { Heading, Lead, Subheading } from '@/components/text'
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import {

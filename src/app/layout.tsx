@@ -5,9 +5,11 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Good Morning AI',
-    default: 'Good Morning AI',
+    template: '%s - Good Morning IA',
+    default: 'Good Morning IA - Agents IA pour PME et professions libérales',
   },
+  description:
+    "L'IA au travail. Vous au pilotage.",
 }
 
 export default function RootLayout({
@@ -16,20 +18,16 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="fr">
       <head>
-        <link
-          rel="stylesheet"
-          href="https://api.fontshare.com/css?f%5B%5D=switzer@400,500,600,700&amp;display=swap"
-        />
         <link
           rel="alternate"
           type="application/rss+xml"
-          title="The Radiant Blog"
+          title="Good Morning IA Blog"
           href="/blog/feed.xml"
         />
       </head>
-      <body className="text-gray-950 antialiased">
+      <body className="bg-background text-on-background font-body antialiased min-h-screen flex flex-col">
         {children}
         <SanityLive revalidateSyncTags={revalidateSyncTags} />
       </body>

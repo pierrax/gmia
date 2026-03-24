@@ -135,9 +135,9 @@ export function V2Hero() {
             <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ02NUaO7doQ4PH96KwW2ogos8yAdKJ0Pvv1rooYcnQ8_OJmK_xRfOquqDGSQGhJIaTjqep24m_N" target="_blank" rel="noopener noreferrer" className="bg-accent-yellow text-on-background px-10 py-5 rounded-full font-bold text-lg hover:bg-white transition-all shadow-xl accent-glow">
               Réserver mon audit gratuit
             </a>
-            <button className="border border-primary px-10 py-5 rounded-full font-bold text-lg text-primary hover:bg-primary-fixed transition-all">
+            <a href="#ce-quon-automatise" className="border border-primary px-10 py-5 rounded-full font-bold text-lg text-primary hover:bg-primary-fixed transition-all">
               Voir nos solutions
-            </button>
+            </a>
           </div>
         </motion.div>
 

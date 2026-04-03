@@ -196,7 +196,7 @@ function MethodeOmbre() {
                 <div className="absolute left-[28px] md:left-[36px] top-[64px] md:top-[72px] bottom-0 w-px bg-outline-variant/30"></div>
               )}
               <div className="flex justify-center">
-                <div className="w-14 h-14 md:w-[72px] md:h-[72px] rounded-full bg-on-background text-surface font-headline text-2xl md:text-3xl font-bold flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors">
+                <div className="w-14 h-14 md:w-[72px] md:h-[72px] rounded-full bg-primary text-surface font-headline text-2xl md:text-3xl font-bold flex items-center justify-center shrink-0">
                   {step.letter}
                 </div>
               </div>

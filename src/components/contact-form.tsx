@@ -19,7 +19,7 @@ export function ContactForm() {
   const [errorMessage, setErrorMessage] = useState('')
   const [turnstileToken, setTurnstileToken] = useState('')
   const turnstileRef = useRef<HTMLDivElement>(null)
-  const widgetIdRef = useRef<string>()
+  const widgetIdRef = useRef<string | undefined>(undefined)
 
   const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY
 

@@ -72,9 +72,10 @@ export function ContactForm() {
         }),
       })
 
+      const data = await response.json().catch(() => null)
+
       if (!response.ok) {
-        const data = await response.json()
-        throw new Error(data.error || 'Erreur inconnue')
+        throw new Error(data?.error || 'Erreur inconnue')
       }
 
       setStatus('success')

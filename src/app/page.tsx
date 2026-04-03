@@ -1,4 +1,5 @@
 import { V2Navbar } from '@/components/v2-navbar'
+import { ContactForm } from '@/components/contact-form'
 import { V2Hero } from '@/components/v2-hero'
 import { ROICalculator } from '@/components/roi-calculator'
 import {
@@ -59,6 +60,190 @@ function HowItWorks() {
   )
 }
 
+function MethodeOmbre() {
+  const steps = [
+    {
+      letter: 'O',
+      phase: 'Jour 1 · Diagnostic terrain',
+      name: 'Observer',
+      body: "J\u2019arrive dans votre entreprise et je fais ce que personne ne fait jamais : je regarde vraiment comment travaillent vos équipes. Pas depuis un questionnaire. Dans le vif, au quotidien. Je cherche les tâches robot — tout ce qui se répète, ne demande aucun jugement humain, et coûte du temps à des gens trop bien payés pour faire ça.",
+      tag: 'Les 5 tâches robot prioritaires · estimation du temps libérable par semaine',
+    },
+    {
+      letter: 'M',
+      phase: 'Semaines 1–2 · En coulisses',
+      name: 'Modéliser',
+      badge: 'Modules prêts à l\u2019emploi',
+      body: "Je n\u2019invente pas la roue à chaque mission. J\u2019ai une bibliothèque d\u2019agents IA pré-construits pour les cas d\u2019usage PME les plus fréquents : qualification de leads, comptes-rendus automatiques, fiches produit, réponses SAV, consolidation de données. Je les adapte à votre contexte en quelques jours — pas en quelques mois. Vos équipes ne savent même pas que les agents existent encore. C\u2019est intentionnel.",
+      tag: '3 agents IA construits, testés, prêts à basculer',
+    },
+    {
+      letter: 'B',
+      phase: 'Semaines 3–4 · Déploiement silencieux',
+      name: 'Basculer',
+      body: "Les agents prennent les tâches robot une par une. Vos équipes ne changent rien à leur façon de travailler. Elles reçoivent simplement des outputs déjà traités là où il y avait une tâche manuelle avant. Un email de qualification pré-analysé à l\u2019ouverture. Un compte-rendu rédigé automatiquement en sortie de réunion. Une fiche produit générée en trente secondes. L\u2019ombre commence à travailler à leur place.",
+      tag: 'Agents actifs en production · zéro friction pour les équipes',
+    },
+    {
+      letter: 'R',
+      phase: 'Fin de mission · Bilan & réinvestissement',
+      name: 'Récolter',
+      body: "On mesure ensemble : combien d\u2019heures par semaine ont disparu du planning humain. On documente, on chiffre, on rend ça visible. Mais surtout — on décide où va ce temps libéré. Pas dans plus de tâches administratives. Dans ce qui renforce votre entreprise : une nouvelle offre, plus de clients, une meilleure qualité de service. Le temps robot devient du temps stratégique.",
+      tag: 'Rapport "Heures robot éliminées" · plan de réinvestissement du temps gagné',
+    },
+    {
+      letter: 'E',
+      phase: 'Abonnement mensuel · La machine récurrente',
+      name: 'Étendre',
+      body: "Chaque mois, on identifie les prochaines tâches robot. On déploie de nouveaux agents depuis la bibliothèque. L\u2019ombre grandit — et le temps libéré cumulé aussi. Dans 12 mois, ce n\u2019est plus la même entreprise. Les mêmes équipes, les mêmes personnes — mais elles font un tout autre niveau de travail. Le travail robot a progressivement disparu de leur quotidien.",
+      tag: 'Nouveaux agents chaque mois · tableau de bord "heures robot éliminées" cumulées',
+    },
+  ]
+
+  const stats = [
+    { num: '30', suffix: 'j', label: 'Premiers agents actifs en production' },
+    { num: '0', suffix: '', label: 'Heure de formation imposée à vos équipes' },
+    { num: '–40', suffix: '%', label: 'De tâches répétitives dès le premier mois' },
+  ]
+
+  return (
+    <section className="py-16 bg-surface-container-low" id="methode-ombre">
+      <div className="max-w-7xl mx-auto px-8">
+        {/* POV */}
+        <div className="mb-20">
+          <p className="text-sm font-label uppercase tracking-widest text-primary font-bold mb-6 flex items-center gap-3">
+            <span className="w-8 h-0.5 bg-primary inline-block"></span>
+            Le constat qui change tout
+          </p>
+          <h2 className="font-headline text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8 max-w-4xl">
+            80% des projets IA échouent.
+            <br />
+            Pas à cause de la technologie.
+            <br />
+            À cause{' '}
+            <span className="text-primary italic font-normal">
+              des gens qu&apos;on essaie de changer.
+            </span>
+          </h2>
+          <div className="max-w-2xl text-on-surface-variant text-lg leading-relaxed space-y-4">
+            <p>
+              On forme des équipes qui font la même chose depuis 15 ans. On leur impose de nouveaux
+              outils, de nouveaux réflexes. On leur promet que ça va &laquo;&nbsp;les
+              libérer&nbsp;&raquo;.
+            </p>
+            <p>
+              <strong className="text-on-surface">
+                Résultat : résistance, abandon, retour à l&apos;ancien mode.
+              </strong>{' '}
+              Et l&apos;investissement part avec.
+            </p>
+            <p>
+              C&apos;est pourquoi je ne forme personne. Je ne change rien à la façon dont vos
+              équipes travaillent.{' '}
+              <strong className="text-on-surface">
+                Je retire les tâches robot — en silence, en coulisses.
+              </strong>
+            </p>
+          </div>
+        </div>
+
+        {/* Analogy */}
+        <div className="bg-[#0F172A] p-10 md:p-14 rounded-2xl mb-20 relative overflow-hidden">
+          <span className="absolute top-0 left-6 font-headline text-[120px] text-white/5 leading-none pointer-events-none select-none">
+            &ldquo;
+          </span>
+          <p className="font-headline text-lg md:text-xl text-white/90 italic leading-relaxed mb-6 relative max-w-3xl">
+            Pensez au moment où votre cabinet a adopté la signature électronique. Vos équipes
+            n&apos;ont pas appris à signer différemment. Elles ont juste{' '}
+            <strong className="not-italic text-[#f7a882]">
+              arrêté d&apos;imprimer, de scanner, d&apos;envoyer par courrier.
+            </strong>{' '}
+            Le contrat était signé. La corvée avait disparu. Personne n&apos;avait changé de métier.
+            <br />
+            <br />
+            C&apos;est exactement ça, la méthode OMBRE — mais appliquée à toutes vos tâches robot,
+            une par une, chaque mois.
+          </p>
+          <p className="text-xs font-label uppercase tracking-widest text-white/30 relative">
+            — La philosophie derrière la méthode
+          </p>
+        </div>
+
+        {/* Method header */}
+        <div className="mb-16">
+          <p className="text-sm font-label uppercase tracking-widest text-primary font-bold mb-6 flex items-center gap-3">
+            <span className="w-8 h-0.5 bg-primary inline-block"></span>
+            La méthode
+          </p>
+          <h2 className="font-headline text-4xl md:text-5xl font-bold leading-tight mb-4 max-w-3xl">
+            <span className="italic font-normal">OMBRE</span> — cinq étapes pour éliminer le
+            travail robot
+          </h2>
+          <p className="text-on-surface-variant text-lg max-w-xl leading-relaxed">
+            Déployée en 30 jours. Sans réunion de cadrage. Sans formation imposée. Sans rien casser
+            à ce qui fonctionne.
+          </p>
+        </div>
+
+        {/* Steps */}
+        <div className="flex flex-col">
+          {steps.map((step, i) => (
+            <div
+              key={i}
+              className="grid grid-cols-[56px_1fr] md:grid-cols-[72px_1fr] gap-x-6 md:gap-x-8 pb-12 group relative"
+            >
+              {i < steps.length - 1 && (
+                <div className="absolute left-[28px] md:left-[36px] top-[64px] md:top-[72px] bottom-0 w-px bg-outline-variant/30"></div>
+              )}
+              <div className="flex justify-center">
+                <div className="w-14 h-14 md:w-[72px] md:h-[72px] rounded-full bg-on-background text-surface font-headline text-2xl md:text-3xl font-bold flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors">
+                  {step.letter}
+                </div>
+              </div>
+              <div className="pt-1 md:pt-3">
+                <p className="text-xs font-label uppercase tracking-widest text-primary font-bold mb-1">
+                  {step.phase}
+                </p>
+                <h3 className="font-headline text-2xl md:text-3xl font-bold mb-3">{step.name}</h3>
+                {step.badge && (
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-primary/5 border border-primary/20 text-xs font-medium text-primary tracking-wide mb-3">
+                    {step.badge}
+                  </span>
+                )}
+                <p className="text-on-surface-variant leading-relaxed max-w-2xl mb-4">
+                  {step.body}
+                </p>
+                <div className="inline-flex items-center gap-2 px-4 py-2.5 bg-surface-container-lowest border-l-2 border-primary text-sm text-on-surface-variant rounded-r-lg">
+                  Livrable :{' '}
+                  <strong className="text-on-surface font-medium">{step.tag}</strong>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Stats */}
+        <div className="grid grid-cols-1 md:grid-cols-3 border-y border-outline-variant/30 my-16">
+          {stats.map((stat, i) => (
+            <div
+              key={i}
+              className={`p-8 ${i < stats.length - 1 ? 'md:border-r border-b md:border-b-0 border-outline-variant/30' : ''}`}
+            >
+              <div className="font-headline text-5xl font-bold mb-2">
+                {stat.num}
+                {stat.suffix && (
+                  <span className="italic font-normal text-primary">{stat.suffix}</span>
+                )}
+              </div>
+              <p className="text-sm text-on-surface-variant">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
 function Services() {
   const services = [
     { icon: <Receipt />, title: 'Facturation', desc: 'Génération automatique, relance et rapprochement bancaire.', gain: '+12h' },
@@ -75,7 +260,7 @@ function Services() {
       <div className="max-w-7xl mx-auto px-8">
         <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
           <h2 className="font-headline text-4xl md:text-5xl font-bold max-w-2xl leading-tight">
-            Les process qui mangent{' '}
+            Les process qui prennent tout{' '}
             <span className="text-primary underline decoration-primary/20 underline-offset-8">
               votre temps.
             </span>
@@ -413,57 +598,7 @@ function CTASection() {
             </p> */}
           </div>
         </div>
-        <div className="bg-surface-container p-10 rounded-3xl border-2 border-primary/5">
-          <h3 className="font-headline text-2xl font-bold mb-8">
-            Option 2 : Envoyer un message
-          </h3>
-          <form action="https://formsubmit.co/maxime@goodmorningia.com" method="POST" className="space-y-6">
-            <input type="hidden" name="_subject" value="Nouveau message depuis Good Morning IA" />
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_next" value="https://goodmorningia.com" />
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-2">
-                <label className="font-label text-xs uppercase font-bold text-on-surface-variant">
-                  Prénom
-                </label>
-                <input
-                  name="prenom"
-                  required
-                  className="w-full bg-white border border-outline-variant/30 rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all outline-none"
-                  type="text"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="font-label text-xs uppercase font-bold text-on-surface-variant">
-                  Email
-                </label>
-                <input
-                  name="email"
-                  required
-                  className="w-full bg-white border border-outline-variant/30 rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all outline-none"
-                  type="email"
-                />
-              </div>
-            </div>
-            <div className="space-y-2">
-              <label className="font-label text-xs uppercase font-bold text-on-surface-variant">
-                Votre besoin en 2 mots
-              </label>
-              <textarea
-                name="message"
-                required
-                className="w-full bg-white border border-outline-variant/30 rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all outline-none"
-                rows={4}
-              ></textarea>
-            </div>
-            <button
-              className="w-full bg-[#0F172A] text-white py-5 rounded-lg font-bold hover:bg-primary transition-all"
-              type="submit"
-            >
-              Envoyer ma demande
-            </button>
-          </form>
-        </div>
+        <ContactForm />
       </div>
     </section>
   )
@@ -521,6 +656,7 @@ export default function Home() {
       <main className="flex-grow">
         <V2Hero />
         <HowItWorks />
+        <MethodeOmbre />
         <Services />
         <ROICalculator />
         <Pricing />

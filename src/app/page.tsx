@@ -37,7 +37,7 @@ function HowItWorks() {
     <section className="py-16 bg-surface" id="comment-ca-marche">
       <div className="max-w-7xl mx-auto px-8">
         <h2 className="font-headline text-4xl md:text-5xl font-bold mb-20 max-w-3xl leading-tight">
-          De la description du problème à l&apos;agent opérationnel —{' '}
+          De la description du problème à l&apos;agent opérationnel,{' '}
           <span className="text-primary italic">en 2 semaines.</span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -66,7 +66,7 @@ function MethodeOmbre() {
       letter: 'O',
       phase: 'Jour 1 · Diagnostic terrain',
       name: 'Observer',
-      body: "J\u2019arrive dans votre entreprise et je fais ce que personne ne fait jamais : je regarde vraiment comment travaillent vos équipes. Pas depuis un questionnaire. Dans le vif, au quotidien. Je cherche les tâches robot — tout ce qui se répète, ne demande aucun jugement humain, et coûte du temps à des gens trop bien payés pour faire ça.",
+      body: "J\u2019arrive dans votre entreprise et je fais ce que personne ne fait jamais : je regarde vraiment comment travaillent vos équipes. Pas depuis un questionnaire. Dans le vif, au quotidien. Je cherche les tâches robot, tout ce qui se répète, ne demande aucun jugement humain, et coûte du temps à des gens trop bien payés pour faire ça.",
       tag: 'Les 5 tâches robot prioritaires · estimation du temps libérable par semaine',
     },
     {
@@ -74,7 +74,7 @@ function MethodeOmbre() {
       phase: 'Semaines 1–2 · En coulisses',
       name: 'Modéliser',
       badge: 'Modules prêts à l\u2019emploi',
-      body: "Je n\u2019invente pas la roue à chaque mission. J\u2019ai une bibliothèque d\u2019agents IA pré-construits pour les cas d\u2019usage PME les plus fréquents : qualification de leads, comptes-rendus automatiques, fiches produit, réponses SAV, consolidation de données. Je les adapte à votre contexte en quelques jours — pas en quelques mois. Vos équipes ne savent même pas que les agents existent encore. C\u2019est intentionnel.",
+      body: "Je n\u2019invente pas la roue à chaque mission. J\u2019ai une bibliothèque d\u2019agents IA pré-construits pour les cas d\u2019usage PME les plus fréquents : qualification de leads, comptes-rendus automatiques, fiches produit, réponses SAV, consolidation de données. Je les adapte à votre contexte en quelques jours, pas en quelques mois. Vos équipes ne savent même pas que les agents existent encore. C\u2019est intentionnel.",
       tag: '3 agents IA construits, testés, prêts à basculer',
     },
     {
@@ -88,14 +88,14 @@ function MethodeOmbre() {
       letter: 'R',
       phase: 'Fin de mission · Bilan & réinvestissement',
       name: 'Récolter',
-      body: "On mesure ensemble : combien d\u2019heures par semaine ont disparu du planning humain. On documente, on chiffre, on rend ça visible. Mais surtout — on décide où va ce temps libéré. Pas dans plus de tâches administratives. Dans ce qui renforce votre entreprise : une nouvelle offre, plus de clients, une meilleure qualité de service. Le temps robot devient du temps stratégique.",
+      body: "On mesure ensemble : combien d\u2019heures par semaine ont disparu du planning humain. On documente, on chiffre, on rend ça visible. Mais surtout, on décide où va ce temps libéré. Pas dans plus de tâches administratives. Dans ce qui renforce votre entreprise : une nouvelle offre, plus de clients, une meilleure qualité de service. Le temps robot devient du temps stratégique.",
       tag: 'Rapport "Heures robot éliminées" · plan de réinvestissement du temps gagné',
     },
     {
       letter: 'E',
       phase: 'Abonnement mensuel · La machine récurrente',
       name: 'Étendre',
-      body: "Chaque mois, on identifie les prochaines tâches robot. On déploie de nouveaux agents depuis la bibliothèque. L\u2019ombre grandit — et le temps libéré cumulé aussi. Dans 12 mois, ce n\u2019est plus la même entreprise. Les mêmes équipes, les mêmes personnes — mais elles font un tout autre niveau de travail. Le travail robot a progressivement disparu de leur quotidien.",
+      body: "Chaque mois, on identifie les prochaines tâches robot. On déploie de nouveaux agents depuis la bibliothèque. L\u2019ombre grandit, et le temps libéré cumulé aussi. Dans 12 mois, ce n\u2019est plus la même entreprise. Les mêmes équipes, les mêmes personnes, mais elles font un tout autre niveau de travail. Le travail robot a progressivement disparu de leur quotidien.",
       tag: 'Nouveaux agents chaque mois · tableau de bord "heures robot éliminées" cumulées',
     },
   ]
@@ -141,7 +141,7 @@ function MethodeOmbre() {
               C&apos;est pourquoi je ne forme personne. Je ne change rien à la façon dont vos
               équipes travaillent.{' '}
               <strong className="text-on-surface">
-                Je retire les tâches robot — en silence, en coulisses.
+                Je retire les tâches robot, en silence, en coulisses.
               </strong>
             </p>
           </div>
@@ -161,11 +161,11 @@ function MethodeOmbre() {
             Le contrat était signé. La corvée avait disparu. Personne n&apos;avait changé de métier.
             <br />
             <br />
-            C&apos;est exactement ça, la méthode OMBRE — mais appliquée à toutes vos tâches robot,
+            C&apos;est exactement ça, la méthode OMBRE, mais appliquée à toutes vos tâches robot,
             une par une, chaque mois.
           </p>
           <p className="text-xs font-label uppercase tracking-widest text-white/30 relative">
-            — La philosophie derrière la méthode
+            La philosophie derrière la méthode
           </p>
         </div>
 
@@ -176,7 +176,7 @@ function MethodeOmbre() {
             La méthode
           </p>
           <h2 className="font-headline text-4xl md:text-5xl font-bold leading-tight mb-4 max-w-3xl">
-            <span className="italic font-normal">OMBRE</span> — cinq étapes pour éliminer le
+            <span className="italic font-normal">OMBRE</span>, cinq étapes pour éliminer le
             travail robot
           </h2>
           <p className="text-on-surface-variant text-lg max-w-xl leading-relaxed">
@@ -375,7 +375,7 @@ function Comparison() {
           {' '}?
         </h2>
         <p className="text-on-surface-variant text-lg mb-16 max-w-3xl">
-          Recruter, externaliser, utiliser un outil SaaS — chaque option a ses compromis. Voilà pourquoi des PME et professions libérales choisissent une autre voie.
+          Recruter, externaliser, utiliser un outil SaaS, chaque option a ses compromis. Voilà pourquoi des PME et professions libérales choisissent une autre voie.
         </p>
         <div className="overflow-x-auto border border-outline-variant/30 rounded-2xl">
           <table className="w-full text-left min-w-[800px]">
@@ -494,7 +494,7 @@ function About() {
             </div>
             <div className="bg-surface-container p-8 rounded-2xl border border-outline-variant/10">
               <p className="text-lg text-on-surface leading-relaxed mb-6">
-                Je suis <strong>Maxime Pierrot</strong> — développeur full-stack et spécialiste en automatisation IA.
+                Je suis <strong>Maxime Pierrot</strong>, développeur full-stack et spécialiste en automatisation IA.
                 Pas d&apos;intermédiaire, pas de junior sur votre dossier. Vous travaillez directement avec moi.
               </p>
               <div className="flex flex-wrap gap-6 text-sm font-label text-on-surface-variant">
@@ -633,7 +633,7 @@ function V2Footer() {
         <div>
           <h5 className="text-white font-bold mb-6">Contact</h5>
           <p className="text-stone-400 text-sm tracking-widest uppercase mb-4 font-headline">
-            Paris — Bordeaux — Remote
+            Paris, Bordeaux, Remote
           </p>
           <p className="text-white font-bold hover:text-[#ff4d20] transition-colors cursor-pointer font-headline text-sm uppercase tracking-widest">
             hello@goodmorningia.com

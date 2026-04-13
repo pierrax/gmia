@@ -21,7 +21,7 @@ export function ROICalculator() {
       <div className="max-w-7xl mx-auto px-8">
         <div className="mb-16">
           <h2 className="font-headline text-4xl md:text-5xl font-bold mb-6 max-w-3xl leading-tight">
-            Combien vous coûtent réellement les{' '}
+            Combien vous perdez réellement avec les{' '}
             <span className="text-primary underline decoration-primary/20 underline-offset-8">
               tâches manuelles ?
             </span>

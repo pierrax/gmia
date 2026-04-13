@@ -7,12 +7,12 @@ export async function GET(req: Request) {
   let siteUrl = new URL(req.url).origin
 
   let feed = new Feed({
-    title: 'The Radiant Blog',
+    title: 'Blog Good Morning IA',
     description:
-      'Stay informed with product updates, company news, and insights on how to sell smarter at your company.',
+      "Automatisation IA pour PME et professions libérales : retours d'expérience, cas d'usage et conseils pratiques.",
     author: {
-      name: 'Michael Foster',
-      email: 'michael.foster@example.com',
+      name: 'Maxime Pierrot',
+      email: 'hello@goodmorningia.com',
     },
     id: siteUrl,
     link: siteUrl,

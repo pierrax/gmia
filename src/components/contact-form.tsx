@@ -64,7 +64,7 @@ export function ContactForm() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          prenom: formData.get('prenom'),
+          nom: formData.get('nom'),
           email: formData.get('email'),
           message: formData.get('message'),
           website: formData.get('website'),
@@ -120,10 +120,10 @@ export function ContactForm() {
         <div className="grid grid-cols-2 gap-4">
           <div className="space-y-2">
             <label className="font-label text-xs uppercase font-bold text-on-surface-variant">
-              Pr&eacute;nom
+              Nom
             </label>
             <input
-              name="prenom"
+              name="nom"
               required
               className="w-full bg-white border border-outline-variant/30 rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all outline-none"
               type="text"

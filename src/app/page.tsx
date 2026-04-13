@@ -22,7 +22,10 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   description:
-    "L'IA au travail. Vous au pilotage.",
+    "Agents IA sur-mesure déployés en 15 jours pour les PME et professions libérales. On identifie et automatise les tâches répétitives qui ont un impact direct sur votre revenu.",
+  alternates: {
+    canonical: '/',
+  },
 }
 
 function HowItWorks() {
@@ -410,7 +413,7 @@ function Comparison() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-accent-yellow text-on-background px-10 py-5 rounded-full font-bold text-lg hover:bg-white transition-all shadow-lg accent-glow"
           >
-            Obtenir mon audit gratuit
+            Identifier vos pertes cachées en 15 minutes
             <ArrowRight className="w-5 h-5" />
           </a>
         </div>
@@ -577,25 +580,22 @@ function FAQ() {
 
 function CTASection() {
   return (
-    <section className="py-16 bg-background relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-20">
+    <section className="py-16 md:py-24 bg-[#0F172A] relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
         <div>
-          <h2 className="font-headline text-5xl font-black mb-8 leading-tight">
+          <h2 className="font-headline text-5xl font-black mb-8 leading-tight text-white">
             Prêt à reprendre le contrôle de{' '}
-            <span className="text-primary italic">votre temps ?</span>
+            <span className="text-[#f7a882] italic font-normal">votre temps ?</span>
           </h2>
-          <p className="text-xl text-on-surface-variant mb-12">
+          <p className="text-xl text-white/55 mb-12">
             L&apos;audit est gratuit, sans engagement, et vous repartirez avec une cartographie de vos
             opportunités d&apos;automatisation.
           </p>
           <div className="space-y-6">
             <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ02NUaO7doQ4PH96KwW2ogos8yAdKJ0Pvv1rooYcnQ8_OJmK_xRfOquqDGSQGhJIaTjqep24m_N" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto bg-accent-yellow text-on-background px-12 py-6 rounded-full font-black text-xl hover:bg-white transition-all flex items-center justify-center gap-4 editorial-shadow accent-glow">
-              Réserver un appel gratuit
+              Identifier vos pertes cachées en 15 minutes
               <ArrowRight />
             </a>
-            {/* <p className="text-on-surface-variant text-sm italic">
-              Plus de 40 entreprises automatisées en 2023.
-            </p> */}
           </div>
         </div>
         <ContactForm />
@@ -611,7 +611,7 @@ function V2Footer() {
         <div>
           <h4 className="text-xl font-bold text-white mb-6">Good Morning IA</h4>
           <p className="font-headline text-sm uppercase tracking-widest text-[#ff4d20] opacity-90 hover:opacity-100 transition-all">
-            L&apos;IA au travail. Vous au pilotage.
+            Pas de projet IA, que des résultats.
           </p>
         </div>
         <div className="flex flex-col gap-4">
@@ -642,16 +642,91 @@ function V2Footer() {
       </div>
       <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-stone-800 text-center">
         <p className="font-headline text-sm uppercase tracking-widest text-stone-500">
-          © {new Date().getFullYear()} Good Morning IA. L&apos;IA au travail. Vous au pilotage.
+          © {new Date().getFullYear()} Good Morning IA. Pas de projet IA, que des résultats.
         </p>
       </div>
     </footer>
   )
 }
 
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Combien coûte une automatisation pour une PME ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "La plupart des missions se situent entre 3 000 et 10 000 €. On vous remet un devis fixe à l'issue de l'audit gratuit. Pas de TJM variable, pas de surprise.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: "Combien de temps avant d'être opérationnel ?",
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '1 à 3 semaines selon la complexité. Le calendrier précis est défini dans le devis, avant tout démarrage.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: "Est-ce que je possède l'automatisation après livraison ?",
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Oui, entièrement. Contrairement aux outils SaaS qui facturent chaque mois, on vous livre et vous possédez. Aucuns frais récurrents obligatoires.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Est-ce que je dois être technique ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Non. Vous décrivez votre activité en français. On fait la traduction en automatisation.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: "En quoi c'est différent de le faire moi-même sur Zapier ou Make ?",
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Zapier et Make sont des outils. Nous sommes les constructeurs. Les vrais process métier impliquent une logique complexe, de la gestion d'erreurs et des décisions IA que ces outils seuls ne gèrent pas.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Que se passe-t-il si un workflow plante ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '30 jours de support sont inclus dans chaque mission. Au-delà, la maintenance mensuelle (optionnelle) couvre les corrections.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: "Que se passe-t-il pendant l'audit gratuit ?",
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "30 minutes. On passe en revue votre workflow, on identifie ce qui peut être automatisé, et on vous donne une estimation chiffrée pendant l'appel. Pas de proposition vague envoyée après. Pas de pression commerciale.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Mon process ne correspond à aucune de vos offres listées ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Prenez un appel et décrivez-nous votre cas. Si c'est répétitif et basé sur des règles, on peut très probablement l'automatiser.",
+      },
+    },
+  ],
+}
+
 export default function Home() {
   return (
     <div className="bg-background text-on-background font-body antialiased min-h-screen flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <V2Navbar />
       <main className="flex-grow">
         <V2Hero />

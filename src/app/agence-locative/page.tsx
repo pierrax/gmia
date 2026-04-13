@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { V2Navbar } from '@/components/v2-navbar'
+import { ContactForm } from '@/components/contact-form'
 import { ArrowRight, Bot, CheckCircle2 } from 'lucide-react'
 import { motion } from 'framer-motion'
 
@@ -9,10 +10,10 @@ const BOOKING_URL =
   'https://calendar.google.com/calendar/appointments/schedules/AcZssZ02NUaO7doQ4PH96KwW2ogos8yAdKJ0Pvv1rooYcnQ8_OJmK_xRfOquqDGSQGhJIaTjqep24m_N'
 
 const agentSteps = [
-  { title: '📩 Loyer non recu a J+2', sub: 'Detection automatique via rapprochement bancaire' },
-  { title: '⚡ Relance envoyee', sub: 'Email personnalise au locataire' },
-  { title: '📊 Proprietaire notifie', sub: 'Recap mensuel genere et envoye' },
-  { title: '📄 Quittance emise', sub: 'PDF genere et envoye au locataire' },
+  { title: '📩 Loyer non reçu à J+2', sub: 'Détection automatique via rapprochement bancaire' },
+  { title: '⚡ Relance envoyée', sub: 'Email personnalisé au locataire' },
+  { title: '📊 Propriétaire notifié', sub: 'Récap mensuel généré et envoyé' },
+  { title: '📄 Quittance émise', sub: 'PDF généré et envoyé au locataire' },
 ]
 
 function AgentCard() {
@@ -45,7 +46,7 @@ function AgentCard() {
         </div>
         <div>
           <p className="font-bold text-sm">Agent Gestion Locative</p>
-          <p className="text-xs text-on-surface-variant">Statut : Operationnel</p>
+          <p className="text-xs text-on-surface-variant">Statut : Opérationnel</p>
         </div>
         <div className="ml-auto flex items-center gap-2">
           <div className="w-3 h-3 rounded-full animate-blink bg-red-500"></div>
@@ -103,19 +104,19 @@ function Hero() {
           className="lg:col-span-7"
         >
           <span className="font-label text-sm uppercase tracking-widest text-primary font-bold mb-6 block">
-            Pour les agences avec pole gestion locative
+            Pour les agences avec pôle gestion locative
           </span>
           <h1 className="font-headline text-5xl md:text-6xl lg:text-7xl font-black text-on-background leading-tight mb-8">
             Vous payez des experts &agrave;{' '}
             <span className="text-primary italic font-normal">envoyer des quittances.</span>
           </h1>
           <p className="text-xl text-on-surface-variant leading-relaxed mb-10 max-w-2xl">
-            J&apos;automatise les relances d&apos;impayes, les quittances et les communications
-            proprietaires,{' '}
+            J&apos;automatise les relances d&apos;impayés, les quittances et les communications
+            propriétaires,{' '}
             <strong className="text-on-surface">
-              sans changer vos outils, sans former vos equipes.
+              sans changer vos outils, sans former vos équipes.
             </strong>{' '}
-            Premier resultat visible en 30 jours.
+            Premier résultat visible en 30 jours.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mb-4">
             <a
@@ -124,7 +125,7 @@ function Hero() {
               rel="noopener noreferrer"
               className="bg-accent-yellow text-on-background px-10 py-5 rounded-full font-bold text-lg hover:bg-white transition-all shadow-xl accent-glow"
             >
-              Reserver 20 minutes, c&apos;est gratuit
+              Voir les gains dans votre agence
             </a>
             <a
               href="#rdv"
@@ -135,7 +136,7 @@ function Hero() {
           </div>
           <p className="text-sm text-on-surface-variant max-w-md leading-relaxed">
             Pas de pitch. Je regarde avec vous ce qui est automatisable dans votre agence et
-            j&apos;estime le temps liberable. Sans engagement.
+            j&apos;estime le temps libérable. Sans engagement.
           </p>
         </motion.div>
 
@@ -154,7 +155,7 @@ function Hero() {
             <span className="text-2xl">⏱️</span>
             <div>
               <p className="text-sm font-bold text-on-background">10 heures / semaine</p>
-              <p className="text-xs text-green-500 font-semibold">economisees par gestionnaire</p>
+              <p className="text-xs text-green-500 font-semibold">économisées par gestionnaire</p>
             </div>
           </motion.div>
           <div className="absolute -top-10 -right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl -z-10"></div>
@@ -168,8 +169,8 @@ function Hero() {
 function StatsBar() {
   const stats = [
     { num: '30', suffix: 'j', label: 'Premiers agents actifs en production' },
-    { num: '0', suffix: '', label: 'Heure de formation imposee a vos equipes' },
-    { num: '-40', suffix: '%', label: 'De taches repetitives des le premier mois' },
+    { num: '0', suffix: '', label: 'Heure de formation imposée à vos équipes' },
+    { num: '-40', suffix: '%', label: 'De tâches répétitives dès le premier mois' },
   ]
 
   return (
@@ -201,7 +202,7 @@ function Problem() {
         <>
           Votre gestionnaire a encore{' '}
           <strong className="text-on-surface">12 emails de locataires en attente</strong>.
-          Quittances, attestations CAF, confirmations de loyer. Il les traitera demain. Peut-etre.
+          Quittances, attestations CAF, confirmations de loyer. Il les traitera demain. Peut-être.
         </>
       ),
     },
@@ -209,10 +210,10 @@ function Problem() {
       time: 'Fin de mois',
       text: (
         <>
-          Les relances d&apos;impayes :{' '}
-          <strong className="text-on-surface">14 cette semaine</strong>. Toutes identiques a deux
-          donnees pres. Il les a tapees une par une, entre deux rendez-vous et trois appels
-          proprietaires.
+          Les relances d&apos;impayés :{' '}
+          <strong className="text-on-surface">14 cette semaine</strong>. Toutes identiques à deux
+          données près. Il les a tapées une par une, entre deux rendez-vous et trois appels
+          propriétaires.
         </>
       ),
     },
@@ -220,20 +221,20 @@ function Problem() {
       time: 'Un jeudi matin',
       text: (
         <>
-          Un proprietaire appelle :{' '}
-          <strong className="text-on-surface">&laquo; Mon locataire a-t-il paye ? &raquo;</strong>{' '}
-          Votre gestionnaire ouvre le logiciel, verifie, rappelle. Quatrieme fois ce mois pour ce
-          proprietaire.
+          Un propriétaire appelle :{' '}
+          <strong className="text-on-surface">&laquo; Mon locataire a-t-il payé ? &raquo;</strong>{' '}
+          Votre gestionnaire ouvre le logiciel, vérifie, rappelle. Quatrième fois ce mois pour ce
+          propriétaire.
         </>
       ),
     },
     {
-      time: 'Apres chaque etat des lieux',
+      time: 'Après chaque état des lieux',
       text: (
         <>
-          45 minutes d&apos;admin : rapport formate, calcul du depot de garantie, lettre au
-          locataire, mise a jour du dossier.{' '}
-          <strong className="text-on-surface">Chaque entree, chaque sortie.</strong> Sans exception.
+          45 minutes d&apos;admin : rapport formaté, calcul du dépôt de garantie, lettre au
+          locataire, mise à jour du dossier.{' '}
+          <strong className="text-on-surface">Chaque entrée, chaque sortie.</strong> Sans exception.
         </>
       ),
     },
@@ -262,27 +263,27 @@ function Problem() {
               Le constat
             </p>
             <h2 className="font-headline text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
-              Aucune de ces taches ne demande l&apos;expertise d&apos;un{' '}
+              Aucune de ces tâches ne demande l&apos;expertise d&apos;un{' '}
               <span className="text-primary italic font-normal">
                 professionnel de l&apos;immobilier.
               </span>
             </h2>
             <p className="text-on-surface-variant text-lg leading-relaxed mb-5">
-              Elles sont la parce que personne ne les a encore retirees du planning. Pas parce
+              Elles sont là parce que personne ne les a encore retirées du planning. Pas parce
               qu&apos;elles ont besoin d&apos;un humain pour exister.
             </p>
             <p className="text-on-surface-variant text-lg leading-relaxed mb-8">
-              Vos gestionnaires sont recrutes et payes pour leur connaissance du marche, leur sens du
-              contact, leur capacite a gerer des situations complexes. Pas pour faire du
-              copier-coller avec un prenom et un montant qui change a chaque fois.
+              Vos gestionnaires sont recrutés et payés pour leur connaissance du marché, leur sens du
+              contact, leur capacité à gérer des situations complexes. Pas pour faire du
+              copier-coller avec un prénom et un montant qui change à chaque fois.
             </p>
             <div className="bg-[#0F172A] p-8 rounded-2xl relative overflow-hidden">
               <span className="absolute top-0 left-4 font-headline text-[100px] text-white/5 leading-none pointer-events-none select-none">
                 &ldquo;
               </span>
               <p className="font-headline text-lg text-white/90 italic leading-relaxed relative">
-                La vraie question n&apos;est pas &laquo; comment former mes equipes a l&apos;IA
-                &raquo;, c&apos;est &laquo; quelles taches est-ce que je leur retire des ce
+                La vraie question n&apos;est pas &laquo; comment former mes équipes à l&apos;IA
+                &raquo;, c&apos;est &laquo; quelles tâches est-ce que je leur retire dès ce
                 mois-ci. &raquo;
               </p>
             </div>
@@ -297,33 +298,33 @@ function Tasks() {
   const tasks = [
     {
       num: '01',
-      name: "Relances d'impayes",
-      desc: "Des qu'un virement n'arrive pas a J+2, le locataire recoit un message personnalise. Vous n'intervenez que si pas de reponse a J+5.",
-      gain: '~3h liberees/semaine',
+      name: "Relances d'impayés",
+      desc: "Dès qu'un virement n'arrive pas à J+2, le locataire reçoit un message personnalisé. Vous n'intervenez que si pas de réponse à J+5.",
+      gain: '~3h libérées/semaine',
     },
     {
       num: '02',
       name: 'Envoi de quittances',
-      desc: 'Le 1er de chaque mois, chaque locataire recoit sa quittance automatiquement. Zero demande traitee manuellement.',
-      gain: '~1h30 liberee/semaine',
+      desc: 'Le 1er de chaque mois, chaque locataire reçoit sa quittance automatiquement. Zéro demande traitée manuellement.',
+      gain: '~1h30 libérée/semaine',
     },
     {
       num: '03',
-      name: 'Recap proprietaires',
-      desc: 'Chaque proprietaire recoit son recap mensuel. Loyer percu, charges, travaux en cours. Zero appel "est-ce que mon loyer est tombe ?"',
-      gain: '~2h liberees/semaine',
+      name: 'Récap propriétaires',
+      desc: 'Chaque propriétaire reçoit son récap mensuel. Loyer perçu, charges, travaux en cours. Zéro appel "est-ce que mon loyer est tombé ?"',
+      gain: '~2h libérées/semaine',
     },
     {
       num: '04',
       name: 'Questions locataires',
-      desc: 'CAF, attestations, coordonnees, reglement de copropriete, reponse automatique 24h/24 sans mobiliser votre equipe.',
-      gain: '~1h30 liberee/semaine',
+      desc: 'CAF, attestations, coordonnées, règlement de copropriété, réponse automatique 24h/24 sans mobiliser votre équipe.',
+      gain: '~1h30 libérée/semaine',
     },
     {
       num: '05',
-      name: 'Suivi etats des lieux',
-      desc: 'Entree ou sortie : convocation, rapport formate, calcul depot de garantie, lettre au locataire. Tout part automatiquement.',
-      gain: '~2h liberees/mouvement',
+      name: 'Suivi états des lieux',
+      desc: 'Entrée ou sortie : convocation, rapport formaté, calcul dépôt de garantie, lettre au locataire. Tout part automatiquement.',
+      gain: '~2h libérées/mouvement',
     },
   ]
 
@@ -332,7 +333,7 @@ function Tasks() {
       <div className="max-w-7xl mx-auto px-8">
         <p className="text-sm font-label uppercase tracking-widest text-primary font-bold mb-6 flex items-center gap-3">
           <span className="w-8 h-0.5 bg-primary inline-block"></span>
-          Ce qui disparait en premier
+          Ce qui disparaît en premier
         </p>
         <h2 className="font-headline text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4">
           Les 5 t&acirc;ches r&eacute;p&eacute;titives
@@ -340,7 +341,7 @@ function Tasks() {
           de la gestion locative
         </h2>
         <p className="text-on-surface-variant text-lg max-w-xl leading-relaxed mb-12">
-          Classees par volume horaire liberable. Sur un portefeuille de 150 lots, elles representent
+          Classées par volume horaire libérable. Sur un portefeuille de 150 lots, elles représentent
           10h par semaine par gestionnaire.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
@@ -352,11 +353,17 @@ function Tasks() {
               <div className="font-headline text-4xl font-bold text-surface-container-highest mb-4">
                 {task.num}
               </div>
-              <h4 className="text-base font-bold mb-3 leading-snug">{task.name}</h4>
+              <h3 className="text-base font-bold mb-3 leading-snug">{task.name}</h3>
               <p className="text-on-surface-variant text-sm leading-relaxed mb-4">{task.desc}</p>
               <p className="text-primary text-sm font-bold">{task.gain}</p>
             </div>
           ))}
+        </div>
+        <div className="mt-12 bg-[#0F172A] p-10 md:p-14 rounded-2xl text-center">
+          <p className="font-headline text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight">
+            Ce temps peut être automatisé{' '}
+            <span className="text-primary italic">sans recruter.</span>
+          </p>
         </div>
       </div>
     </section>
@@ -386,11 +393,11 @@ function Calculator() {
               Calculez ce que vous investissez dans du copier-coller
             </h2>
             <p className="text-on-surface-variant text-lg leading-relaxed mb-4">
-              Pas en heures perdues. En euros. Sur la base du cout charge de vos gestionnaires et du
-              volume de taches admin de votre portefeuille.
+              Pas en heures perdues. En euros. Sur la base du coût chargé de vos gestionnaires et du
+              volume de tâches admin de votre portefeuille.
             </p>
             <p className="text-on-surface-variant text-lg leading-relaxed">
-              Un chiffre qu&apos;on calcule soi-meme a plus de poids que n&apos;importe quel
+              Un chiffre qu&apos;on calcule soi-même à plus de poids que n&apos;importe quel
               argument commercial. Faites-le.
             </p>
           </div>
@@ -446,14 +453,14 @@ function Calculator() {
             </div>
             <div className="bg-[#0F172A] p-8 rounded-xl">
               <p className="text-xs font-label uppercase tracking-widest text-white/40 mb-2">
-                Cout annuel de l&apos;admin manuelle
+                Coût annuel de l&apos;admin manuelle
               </p>
               <p className="font-headline text-4xl md:text-5xl font-bold text-white mb-1">
                 {coutAnnuel.toLocaleString('fr-FR')}{' '}
                 <span className="italic font-normal text-[#f7a882]">&euro;</span>
               </p>
               <p className="text-sm text-white/50 mb-6">
-                investis chaque annee dans des taches automatisables
+                investis chaque année dans des tâches automatisables
               </p>
               <div className="grid grid-cols-2 gap-4 pt-6 border-t border-white/10">
                 <div>
@@ -461,7 +468,7 @@ function Calculator() {
                   <p className="text-lg font-medium text-white">{heuresSemaine} h</p>
                 </div>
                 <div>
-                  <p className="text-xs text-white/40 mb-1">Cout sur 3 ans</p>
+                  <p className="text-xs text-white/40 mb-1">Coût sur 3 ans</p>
                   <p className="text-lg font-medium text-white">
                     {(coutAnnuel * 3).toLocaleString('fr-FR')} &euro;
                   </p>
@@ -477,41 +484,41 @@ function Calculator() {
 
 function Solution() {
   const beforeItems = [
-    "Relance envoyee a la main a J+2, J+5, J+15, si on n'a pas oublie",
-    'Quittance envoyee quand le locataire la demande',
-    'Proprietaire qui appelle pour savoir si son loyer est tombe',
+    "Relance envoyée à la main à J+2, J+5, J+15, si on n'a pas oublié",
+    'Quittance envoyée quand le locataire la demande',
+    'Propriétaire qui appelle pour savoir si son loyer est tombé',
     'CRM rempli "plus tard", donc mal, ou pas du tout',
-    "45 min d'admin apres chaque etat des lieux",
+    "45 min d'admin après chaque état des lieux",
   ]
 
   const afterItems = [
-    'Relances parties automatiquement . gestionnaire alerte uniquement si pas de reponse',
-    'Quittance envoyee le 1er du mois a tous les locataires . aucune demande traitee',
-    'Recap proprietaire envoye automatiquement . zero appel de verification',
-    'CRM mis a jour en temps reel sans intervention humaine',
-    "Documents generes et envoyes automatiquement depuis la date d'etat des lieux",
+    'Relances parties automatiquement . gestionnaire alerté uniquement si pas de réponse',
+    'Quittance envoyée le 1er du mois à tous les locataires . aucune demande traitée',
+    'Récap propriétaire envoyé automatiquement . zéro appel de vérification',
+    'CRM mis à jour en temps réel sans intervention humaine',
+    "Documents générés et envoyés automatiquement depuis la date d'état des lieux",
   ]
 
   const timeline = [
     {
       day: 'Jour 1',
       name: 'Observer',
-      desc: '2h sur site pour identifier les 5 t&acirc;ches r&eacute;p&eacute;titives prioritaires et estimer le temps liberable',
+      desc: '2h sur site pour identifier les 5 tâches répétitives prioritaires et estimer le temps libérable',
     },
     {
       day: 'Semaines 1-2',
-      name: 'Modeliser',
-      desc: "Construction des agents en coulisses. Vos equipes ne savent pas encore qu'ils existent.",
+      name: 'Modéliser',
+      desc: "Construction des agents en coulisses. Vos équipes ne savent pas encore qu'ils existent.",
     },
     {
       day: 'Semaines 3-4',
       name: 'Basculer',
-      desc: "Deploiement silencieux. Les outputs arrivent la ou il y avait des taches manuelles avant.",
+      desc: "Déploiement silencieux. Les outputs arrivent là où il y avait des tâches manuelles avant.",
     },
     {
       day: 'Jour 30',
       name: 'Mesurer',
-      desc: 'Bilan "heures robot eliminees". On chiffre, on documente, on decide de la suite.',
+      desc: 'Bilan "heures robot éliminées". On chiffre, on documente, on décide de la suite.',
     },
   ]
 
@@ -521,14 +528,14 @@ function Solution() {
         <div className="text-center max-w-2xl mx-auto mb-16">
           <p className="text-sm font-label uppercase tracking-widest text-primary font-bold mb-6 flex items-center justify-center gap-3">
             <span className="w-8 h-0.5 bg-primary inline-block"></span>
-            Comment ca marche
+            Comment ça marche
           </p>
           <h2 className="font-headline text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
             Ce qui change, et ce qui ne change pas
           </h2>
           <p className="text-on-surface-variant text-lg leading-relaxed">
             Vos gestionnaires ne font pas de formation. Ne changent pas leurs outils. Ne modifient
-            pas leurs habitudes. Les t&acirc;ches r&eacute;p&eacute;titives disparaissent juste de leur planning.
+            pas leurs habitudes. Les tâches répétitives disparaissent juste de leur planning.
           </p>
         </div>
 
@@ -554,7 +561,7 @@ function Solution() {
           </div>
           <div className="bg-[#0F172A] p-10">
             <p className="text-xs font-label uppercase tracking-widest text-white/30 font-bold mb-6">
-              Apres deploiement
+              Après déploiement
             </p>
             <div className="space-y-4">
               {afterItems.map((item, i) => (
@@ -584,7 +591,7 @@ function Solution() {
               <p className="text-xs font-label uppercase tracking-widest text-primary font-bold mb-2">
                 {step.day}
               </p>
-              <h4 className="font-headline text-xl font-bold mb-2">{step.name}</h4>
+              <h3 className="font-headline text-xl font-bold mb-2">{step.name}</h3>
               <p className="text-on-surface-variant text-sm leading-relaxed">{step.desc}</p>
             </div>
           ))}
@@ -613,25 +620,25 @@ function Fomo() {
           </span>
         </h2>
         <p className="text-white/65 text-lg leading-relaxed max-w-2xl mb-8">
-          Sur les 12 derniers mois, j&apos;ai eu des echanges avec une trentaine de responsables de
-          gestion locative en France. Ceux qui ont avance sur le sujet ont tous dit la meme chose
-          apres coup.
+          Sur les 12 derniers mois, j&apos;ai eu des échanges avec une trentaine de responsables de
+          gestion locative en France. Ceux qui ont avancé sur le sujet ont tous dit la même chose
+          après coup.
         </p>
         <div className="border-l-[3px] border-primary px-8 py-6 my-10 max-w-2xl">
           <p className="font-headline italic text-xl md:text-2xl text-white leading-relaxed">
-            &laquo; J&apos;aurais du regarder ca six mois plus tot. On gere maintenant{' '}
-            <strong className="not-italic text-[#f7a882]">30% de lots supplementaires</strong> avec
-            la meme equipe, et mes gestionnaires ne parlent plus de partir. &raquo;
+            &laquo; J&apos;aurais dû regarder ça six mois plus tôt. On gère maintenant{' '}
+            <strong className="not-italic text-[#f7a882]">30% de lots supplémentaires</strong> avec
+            la même équipe, et mes gestionnaires ne parlent plus de partir. &raquo;
           </p>
         </div>
         <p className="text-white/65 text-lg leading-relaxed max-w-2xl">
           Ce n&apos;est pas une question de taille d&apos;agence ni de budget. C&apos;est une
           question de timing.{' '}
           <strong className="text-white">
-            Les agences qui automatisent maintenant creusent un ecart qui sera difficile a rattraper.
+            Les agences qui automatisent maintenant creusent un écart qui sera difficile à rattraper.
           </strong>{' '}
           Celles qui attendent ne perdent pas de temps. Elles laissent juste l&apos;avantage
-          a leurs voisins.
+          à leurs voisins.
         </p>
       </div>
     </section>
@@ -643,28 +650,28 @@ function FAQ() {
 
   const faqs = [
     {
-      q: 'Ca va perturber mes equipes ?',
-      a: "Non, et c'est le point central de la methode. Vos gestionnaires ne voient rien changer dans leur facon de travailler. Les taches admin disparaissent juste de leur planning. Pas de formation, pas de nouveaux outils a apprendre. Certains ne realisent le changement qu'au bout de 2 semaines, quand ils constatent qu'ils n'ont plus rien dans leur file de relances.",
+      q: 'Ça va perturber mes équipes ?',
+      a: "Non, et c'est le point central de la méthode. Vos gestionnaires ne voient rien changer dans leur façon de travailler. Les tâches admin disparaissent juste de leur planning. Pas de formation, pas de nouveaux outils à apprendre. Certains ne réalisent le changement qu'au bout de 2 semaines, quand ils constatent qu'ils n'ont plus rien dans leur file de relances.",
     },
     {
-      q: 'Ca fonctionne avec notre logiciel de gestion ?',
-      a: "Oui. Je travaille avec ICS, Crypto, Galaxie et la plupart des logiciels du marche francais. La connexion se fait en coulisses, vous n'avez rien a configurer. Si vous avez un logiciel moins repandu, je le verifie lors de l'appel decouverte avant de m'engager.",
+      q: 'Ça fonctionne avec notre logiciel de gestion ?',
+      a: "Oui. Je travaille avec ICS, Crypto, Galaxie et la plupart des logiciels du marché français. La connexion se fait en coulisses, vous n'avez rien à configurer. Si vous avez un logiciel moins répandu, je le vérifie lors de l'appel découverte avant de m'engager.",
     },
     {
-      q: "On est une petite structure, c'est adapte a notre taille ?",
-      a: "La methode est pensee pour des portefeuilles de 80 a 500 lots. En dessous de 80 lots, le ROI est moins evident, je vous le dirai honnetement en appel plutot que de vous vendre quelque chose qui ne vaut pas le cout. Entre 80 et 150 lots, on commence generalement par 2 ou 3 automatisations prioritaires.",
+      q: "On est une petite structure, c'est adapté à notre taille ?",
+      a: "La méthode est pensée pour des portefeuilles de 80 à 500 lots. En dessous de 80 lots, le ROI est moins évident, je vous le dirai honnêtement en appel plutôt que de vous vendre quelque chose qui ne vaut pas le coût. Entre 80 et 150 lots, on commence généralement par 2 ou 3 automatisations prioritaires.",
     },
     {
-      q: 'Combien ca coute ?',
-      a: "L'audit terrain (Jour 1, sur site) est a 990\u20AC. L'abonnement mensuel tourne entre 490\u20AC et 990\u20AC selon la taille du portefeuille et le nombre d'automatisations actives. Le calcul de ROI qu'on fait ensemble en appel est generalement sans ambiguite : si le cout mensuel est inferieur au temps libere x cout horaire charge de vos gestionnaires, ca vaut le coup.",
+      q: 'Combien ça coûte ?',
+      a: "L'audit terrain (Jour 1, sur site) est à 990\u20AC. L'abonnement mensuel tourne entre 490\u20AC et 990\u20AC selon la taille du portefeuille et le nombre d'automatisations actives. Le calcul de ROI qu'on fait ensemble en appel est généralement sans ambiguïté : si le coût mensuel est inférieur au temps libéré x coût horaire chargé de vos gestionnaires, ça vaut le coup.",
     },
     {
-      q: 'Et si les resultats ne sont pas au rendez-vous ?',
-      a: "Le deploiement dure 30 jours. A l'issue du premier mois, on mesure ensemble les heures liberees. Si le resultat est inferieur a ce qu'on avait estime ensemble, on ajuste ou on s'arrete la, sans frais supplementaires. Je suis paye sur des resultats, pas sur des promesses.",
+      q: 'Et si les résultats ne sont pas au rendez-vous ?',
+      a: "Le déploiement dure 30 jours. À l'issue du premier mois, on mesure ensemble les heures libérées. Si le résultat est inférieur à ce qu'on avait estimé ensemble, on ajuste ou on s'arrête là, sans frais supplémentaires. Je suis payé sur des résultats, pas sur des promesses.",
     },
     {
-      q: 'Nos donnees locataires sont-elles en securite ?',
-      a: "Toutes les donnees restent dans vos outils existants. Je n'accede pas aux donnees personnelles de vos locataires, j'automatise les flux entre vos outils existants sans les stocker ailleurs. Le deploiement est conforme au RGPD. Je peux vous fournir un document de synthese technique si votre DPO le demande.",
+      q: 'Nos données locataires sont-elles en sécurité ?',
+      a: "Toutes les données restent dans vos outils existants. Je n'accède pas aux données personnelles de vos locataires, j'automatise les flux entre vos outils existants sans les stocker ailleurs. Le déploiement est conforme au RGPD. Je peux vous fournir un document de synthèse technique si votre DPO le demande.",
     },
   ]
 
@@ -719,6 +726,9 @@ function About() {
               className="rounded-3xl shadow-2xl border-2 border-primary/20 w-full object-cover aspect-[4/5]"
               src="/maxime.jpg"
               alt="Maxime Pierrot - Good Morning IA"
+              loading="lazy"
+              width={400}
+              height={500}
             />
             <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-accent-yellow rounded-full -z-10 mix-blend-multiply opacity-50"></div>
           </div>
@@ -733,23 +743,23 @@ function About() {
             </h2>
             <div className="space-y-5 text-on-surface-variant text-lg leading-relaxed">
               <p>
-                Je travaille depuis plusieurs annees sur l&apos;automatisation des process des PME
-                francaises avec des outils IA. J&apos;ai commence a travailler avec des agences
+                Je travaille depuis plusieurs années sur l&apos;automatisation des process des PME
+                françaises avec des outils IA. J&apos;ai commencé à travailler avec des agences
                 immobilieres parce que j&apos;ai vu quelque chose d&apos;absurde sur le terrain.
               </p>
               <p>
-                Des professionnels tres bien payes pour leur expertise du marche et leurs relations
-                clients, qui passent un tiers de leur journee a faire du copier-coller. Ce
-                n&apos;est pas un probleme de competence.{' '}
+                Des professionnels très bien payés pour leur expertise du marché et leurs relations
+                clients, qui passent un tiers de leur journée à faire du copier-coller. Ce
+                n&apos;est pas un problème de compétence.{' '}
                 <strong className="text-on-surface">C&apos;est un probleme d&apos;outillage.</strong>
               </p>
               <p>
-                Je ne vends pas de formation IA. Je ne change pas votre facon de travailler. Je
-                retire les t&acirc;ches r&eacute;p&eacute;titives du planning de vos gestionnaires, en silence, en
+                Je ne vends pas de formation IA. Je ne change pas votre façon de travailler. Je
+                retire les tâches répétitives du planning de vos gestionnaires, en silence, en
                 coulisses, pendant que votre agence continue de tourner normalement.
               </p>
               <p>
-                Good Morning IA est base a Bordeaux. Je travaille avec des agences sur toute la
+                Good Morning IA est basé à Bordeaux. Je travaille avec des agences sur toute la
                 France.
               </p>
             </div>
@@ -763,51 +773,38 @@ function About() {
 function CTAFinal() {
   return (
     <section className="py-16 md:py-24 bg-[#0F172A]" id="rdv">
-      <div className="max-w-2xl mx-auto px-8 text-center">
-        <p className="text-sm font-label uppercase tracking-widest text-white/30 font-bold mb-6 flex items-center justify-center gap-3">
-          <span className="w-8 h-0.5 bg-white/20 inline-block"></span>
-          Par ou commencer
-        </p>
-        <h2 className="font-headline text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
-          20 minutes pour savoir ce que ca vaut{' '}
-          <span className="text-[#f7a882] italic font-normal">chez vous.</span>
-        </h2>
-        <p className="text-white/55 text-lg leading-relaxed mb-12 max-w-md mx-auto">
-          Pas de pitch. Je regarde avec vous les 3 taches les plus chronophages et j&apos;estime le
-          temps liberable, avec vos vrais chiffres, pas des moyennes de secteur.
-        </p>
-        <div className="flex flex-col items-center gap-0">
-          <a
-            href={BOOKING_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-accent-yellow text-on-background px-10 py-5 rounded-full font-bold text-lg hover:bg-white transition-all shadow-xl accent-glow mb-4"
-          >
-            Reserver un appel decouverte, gratuit
-            <ArrowRight className="w-5 h-5" />
-          </a>
-          <p className="text-sm text-white/40 leading-relaxed max-w-sm mb-10">
-            Mardi ou jeudi &middot; 20 minutes &middot; visio ou telephone
-            <br />
-            Sans engagement &middot; Je vous dirai honnetement si ca vaut le coup.
+      <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+        <div>
+          <p className="text-sm font-label uppercase tracking-widest text-white/30 font-bold mb-6 flex items-center gap-3">
+            <span className="w-8 h-0.5 bg-white/20 inline-block"></span>
+            Par où commencer
           </p>
-          <div className="flex items-center gap-4 w-full mb-8">
-            <span className="flex-1 h-px bg-white/10"></span>
-            <span className="text-xs font-label uppercase tracking-widest text-white/25">
-              Ou d&apos;abord
-            </span>
-            <span className="flex-1 h-px bg-white/10"></span>
+          <h2 className="font-headline text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
+            20 minutes pour savoir ce que ça vaut{' '}
+            <span className="text-[#f7a882] italic font-normal">chez vous.</span>
+          </h2>
+          <p className="text-white/55 text-lg leading-relaxed mb-12">
+            Pas de pitch. Je regarde avec vous les 3 tâches les plus chronophages et j&apos;estime le
+            temps libérable, avec vos vrais chiffres, pas des moyennes de secteur.
+          </p>
+          <div className="space-y-6">
+            <a
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-accent-yellow text-on-background px-10 py-5 rounded-full font-bold text-lg hover:bg-white transition-all shadow-xl accent-glow"
+            >
+              Voir les gains dans votre agence
+              <ArrowRight className="w-5 h-5" />
+            </a>
+            <p className="text-sm text-white/40 leading-relaxed">
+              Mardi ou jeudi &middot; 20 minutes &middot; visio ou téléphone
+              <br />
+              Sans engagement &middot; Je vous dirai honnêtement si ça vaut le coup.
+            </p>
           </div>
-          <a
-            href="#"
-            className="inline-block border border-white/20 text-white/70 px-8 py-4 rounded-full font-bold hover:bg-white/5 hover:border-white/40 hover:text-white transition-all mb-3"
-          >
-            Telecharger la Facture 2026 du copier-coller
-          </a>
-          <p className="text-xs text-white/30">
-            Le calcul complet du cout reel de l&apos;admin manuelle &middot; PDF gratuit
-          </p>
         </div>
+        <ContactForm />
       </div>
     </section>
   )
@@ -828,7 +825,7 @@ function V2Footer() {
           {[
             { label: 'Services', href: '/#ce-quon-automatise' },
             { label: 'Entreprise', href: '/#a-propos' },
-            { label: 'Mentions legales', href: '/conditions' },
+            { label: 'Mentions légales', href: '/conditions' },
           ].map((link) => (
             <a
               key={link.label}

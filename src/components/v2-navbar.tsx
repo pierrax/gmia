@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -26,9 +27,9 @@ export function V2Navbar() {
       className={`sticky top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-[#0F172A]/95 backdrop-blur-md shadow-sm' : 'bg-[#0F172A]'}`}
     >
       <div className="flex justify-between items-center px-8 py-6 max-w-screen-2xl mx-auto">
-        <a className="text-2xl font-black italic text-primary font-headline" href="#">
+        <Link className="text-2xl font-black italic text-primary font-headline" href="/">
           Good Morning IA
-        </a>
+        </Link>
 
         <div className="hidden md:flex items-center space-x-10">
           {navLinks.map((item) => (

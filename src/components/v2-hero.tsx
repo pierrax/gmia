@@ -123,17 +123,16 @@ export function V2Hero() {
             Agents IA pour PME et professions libérales
           </span>
           <h1 className="font-headline text-6xl md:text-8xl font-black text-on-background leading-tight mb-8">
-            On automatise le travail.{' '}
-            <span className="text-primary italic">Vous gérez votre activité.</span>
+            Agents IA sur-mesure{' '}
+            <span className="text-primary italic">déployés en 15 jours pour les PME</span>
           </h1>
           <p className="text-xl text-on-surface-variant leading-relaxed mb-12 max-w-2xl">
-            Libérez votre équipe des tâches répétitives grâce à nos agents IA sur-mesure. Une
-            infrastructure d&apos;automatisation robuste qui s&apos;intègre à vos outils actuels en moins de 15
-            jours.
+            Vous perdez du chiffre à cause de tâches non automatisées.
+            On identifie et automatise uniquement celles qui ont un impact direct sur votre revenu.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ02NUaO7doQ4PH96KwW2ogos8yAdKJ0Pvv1rooYcnQ8_OJmK_xRfOquqDGSQGhJIaTjqep24m_N" target="_blank" rel="noopener noreferrer" className="bg-accent-yellow text-on-background px-10 py-5 rounded-full font-bold text-lg hover:bg-white transition-all shadow-xl accent-glow">
-              Réserver mon audit gratuit
+              Identifier vos pertes cachées en 15 minutes
             </a>
             <a href="#ce-quon-automatise" className="border border-primary px-10 py-5 rounded-full font-bold text-lg text-primary hover:bg-primary-fixed transition-all">
               Voir nos solutions

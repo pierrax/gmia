@@ -8,8 +8,8 @@ import { clsx } from 'clsx'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Login',
-  description: 'Sign in to your account to continue.',
+  title: 'Connexion',
+  description: 'Connectez-vous à votre espace Good Morning IA.',
 }
 
 export default function Login() {

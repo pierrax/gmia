@@ -15,9 +15,9 @@ import {
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Pricing',
+  title: 'Tarifs',
   description:
-    'Companies all over the world have closed millions of deals with Radiant. Sign up today and start selling smarter.',
+    "Tarifs clairs et fixes pour l'automatisation de vos process. Devis remis à l'issue de l'audit gratuit, sans surprise.",
 }
 
 const tiers = [

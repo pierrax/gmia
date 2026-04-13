@@ -28,7 +28,7 @@ import { notFound } from 'next/navigation'
 export const metadata: Metadata = {
   title: 'Blog',
   description:
-    'Stay informed with product updates, company news, and insights on how to sell smarter at your company.',
+    "Automatisation IA pour PME : retours d'expérience, cas d'usage et conseils pratiques par Good Morning IA.",
 }
 
 const postsPerPage = 5

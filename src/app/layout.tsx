@@ -28,12 +28,39 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://goodmorningia.com'),
   title: {
-    template: '%s - Good Morning IA',
-    default: 'Good Morning IA - Agents IA pour PME et professions libérales',
+    template: '%s | Good Morning IA',
+    default: 'Good Morning IA - Agents IA sur-mesure pour PME et professions libérales',
   },
   description:
-    "L'IA au travail. Vous au pilotage.",
+    "Good Morning IA automatise les tâches répétitives des PME et professions libérales avec des agents IA sur-mesure. Déployés en 15 jours, sans formation, sans changer vos outils.",
+  openGraph: {
+    type: 'website',
+    locale: 'fr_FR',
+    siteName: 'Good Morning IA',
+    title: 'Good Morning IA - Agents IA sur-mesure pour PME et professions libérales',
+    description:
+      "Good Morning IA automatise les tâches répétitives des PME et professions libérales avec des agents IA sur-mesure. Déployés en 15 jours, sans formation, sans changer vos outils.",
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Good Morning IA - Agents IA pour PME',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Good Morning IA - Agents IA sur-mesure pour PME',
+    description:
+      "Automatisez vos tâches répétitives avec des agents IA sur-mesure. Déployés en 15 jours, sans formation.",
+    images: ['/og-image.png'],
+  },
+  alternates: {
+    canonical: '/',
+  },
 }
 
 export default function RootLayout({
@@ -49,6 +76,34 @@ export default function RootLayout({
           type="application/rss+xml"
           title="Good Morning IA Blog"
           href="/blog/feed.xml"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: 'Good Morning IA',
+              url: 'https://goodmorningia.com',
+              logo: 'https://goodmorningia.com/gmai_logo_color.png',
+              email: 'hello@goodmorningia.com',
+              description:
+                "Good Morning IA automatise les tâches répétitives des PME et professions libérales avec des agents IA sur-mesure.",
+              areaServed: 'FR',
+              address: [
+                {
+                  '@type': 'PostalAddress',
+                  addressLocality: 'Paris',
+                  addressCountry: 'FR',
+                },
+                {
+                  '@type': 'PostalAddress',
+                  addressLocality: 'Bordeaux',
+                  addressCountry: 'FR',
+                },
+              ],
+            }),
+          }}
         />
         <Script id="gtm" strategy="afterInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

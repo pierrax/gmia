@@ -607,7 +607,7 @@ function CTASection() {
 function V2Footer() {
   return (
     <footer className="bg-[#1c1c18] w-full py-16 px-8 mt-auto border-t border-stone-800">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-7xl mx-auto items-start text-center md:text-left">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto items-start text-center md:text-left">
         <div>
           <h4 className="text-xl font-bold text-white mb-6">Good Morning IA</h4>
           <p className="font-headline text-sm uppercase tracking-widest text-[#ff4d20] opacity-90 hover:opacity-100 transition-all">
@@ -629,6 +629,15 @@ function V2Footer() {
               {link.label}
             </a>
           ))}
+        </div>
+        <div className="flex flex-col gap-4">
+          <h5 className="text-white font-bold mb-2">Solutions</h5>
+          <a
+            className="text-stone-400 hover:text-white transition-colors font-headline text-sm uppercase tracking-widest"
+            href="/agence-locative"
+          >
+            Agences de gestion locative
+          </a>
         </div>
         <div>
           <h5 className="text-white font-bold mb-6">Contact</h5>
